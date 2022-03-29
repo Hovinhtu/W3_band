@@ -17,6 +17,7 @@
   </head>
   <body>
     <div id="main">
+      <!-- Header -->
       <div id="header">
         <div id="logo"></div>
         <ul id="nav">
@@ -37,6 +38,7 @@
         <span class="ti-search"></span>
       </div>
 
+      <!-- Slider -->
       <div id="slider">
         <div class="text">
           <h3 class="title">Chicago</h3>
@@ -47,32 +49,200 @@
       </div>
 
       <div id="content">
-        <div class="content-section">
-          <h3 class="section-heading">the band</h3>
-          <p class="section-sub-heading">We love music</p>
-        </div>
+        <!-- About section -->
         <div class="about-section">
+          <div class="content-section">
+            <h3 class="section-heading">the band</h3>
+            <p class="section-sub-heading">We love music</p>
+          </div>
           <p class="about-text">
-            We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            We have created a fictional band website. Lorem ipsum dolor sit
+            amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+            cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum consectetur adipiscing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat.
           </p>
           <div class="member-list">
             <div class="member-item">
               <div class="member-name">Name</div>
-              <img src="/assets/img/bandmember.jpg" alt="no-picture" class="member-img">
+              <img
+                src="/assets/img/bandmember.jpg"
+                alt="no-picture"
+                class="member-img"
+              />
             </div>
             <div class="member-item">
               <div class="member-name">Name</div>
-              <img src="/assets/img/bandmember.jpg" alt="no-picture" class="member-img">
+              <img
+                src="/assets/img/bandmember.jpg"
+                alt="no-picture"
+                class="member-img"
+              />
             </div>
             <div class="member-item">
               <div class="member-name">Name</div>
-              <img src="/assets/img/bandmember.jpg" alt="no-picture" class="member-img">
+              <img
+                src="/assets/img/bandmember.jpg"
+                alt="no-picture"
+                class="member-img"
+              />
+            </div>
+          </div>
+          <div class="clear"></div>
+        </div>
+
+        <!-- Tour section -->
+        <div class="tour-container">
+          <div class="tour-section">
+            <div class="content-section">
+              <h3 class="section-heading text-white">tour dates</h3>
+              <p class="section-sub-heading text-white">
+                Remember to book your tickets!
+              </p>
+            </div>
+            <br />
+            <ul class="list-ticket">
+              <li>September<span class="sold-out">Sold out</span></li>
+              <li>October<span class="sold-out">Sold out</span></li>
+              <li>November<span class="quantity">3</span></li>
+            </ul>
+            <div class="tour-places">
+              <div class="tour-place">
+                <img
+                  src="./assets/places/newyork.jpg"
+                  alt="no-picture"
+                  class="tour-place-img"
+                />
+                <div class="tour-place-info">
+                  <h3 class="place">New York</h3>
+                  <p class="date">Fri 27 Nov 2016</p>
+                  <p class="desc">
+                    Praesent tincidunt sed tellus ut rutrum sed vitae justo.
+                  </p>
+                  <button class="button js-open-modal-box">Buy Tickets</button>
+                </div>
+              </div>
+              <div class="tour-place">
+                <img
+                  src="./assets/places/paris.jpg"
+                  alt="no-picture"
+                  class="tour-place-img"
+                />
+                <div class="tour-place-info">
+                  <h3 class="place">Paris</h3>
+                  <p class="date">Sat 28 Nov 2016</p>
+                  <p class="desc">
+                    Praesent tincidunt sed tellus ut rutrum sed vitae justo.
+                  </p>
+                  <button class="button js-open-modal-box">Buy Tickets</button>
+                </div>
+              </div>
+              <div class="tour-place">
+                <img
+                  src="./assets/places/sanfran.jpg"
+                  alt="no-picture"
+                  class="tour-place-img"
+                />
+                <div class="tour-place-info">
+                  <h3 class="place">San Francisco</h3>
+                  <p class="date">Sun 29 Nov 2016</p>
+                  <p class="desc">
+                    Praesent tincidunt sed tellus ut rutrum sed vitae justo.
+                  </p>
+                  <button class="button js-open-modal-box">Buy Tickets</button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+
+        <!-- Modal box -->
+
+        <div class="modal-box js-modal-box">
+          <div class="modal-box-container js-modal-box-container">
+            <div class="btn-close js-close-modal-box">
+              <i class="ti-close"></i>
+            </div>
+
+            <div class="modal-box-header">
+              <i class="ti-briefcase"></i>
+              <span class="modal-box-header-title">tickets</span>
+            </div>
+
+            <div class="modal-box-content">
+              <form action="">
+                <label for="ticket-name" class="modal-box-content-label">
+                  <i class="ti-shopping-cart"></i>
+                  Tickets, $15 per person
+                </label>
+                <input
+                  type="text"
+                  id="ticket-name"
+                  class="input-ticket"
+                  placeholder="How many?"
+                />
+
+                <label for="ticket-email" class="modal-box-content-label">
+                  <i class="ti-stamp"></i>
+                  Send To
+                </label>
+                <input
+                  type="text"
+                  id="ticket-email"
+                  class="input-ticket"
+                  placeholder="Enter email"
+                />
+
+                <button class="input-ticket-button">
+                  Pay <i class="ti-check"></i>
+                </button>
+              </form>
+              <p class="modal-box-footer-text">Need <a href="">help?</a></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact section -->
       </div>
 
+      <!-- Footer -->
       <div id="footer"></div>
     </div>
   </body>
+
+  <!-- Modal box js -->
+  <script>
+    const buyBtns = document.querySelectorAll(".js-open-modal-box");
+    const modalBox = document.querySelector(".js-modal-box");
+    const modalBoxContainer = document.querySelector(".js-modal-box-container");
+    const closeBtn = document.querySelector(".js-close-modal-box");
+
+    function hanldeClickOpen() {
+      modalBox.classList.add("modal-box-open");
+    }
+
+    function hanldeClickClose() {
+      modalBox.classList.remove("modal-box-open");
+    }
+
+    for (const buyBtn of buyBtns) {
+      buyBtn.addEventListener("click", hanldeClickOpen);
+    }
+
+    closeBtn.addEventListener("click", hanldeClickClose);
+
+    modalBox.addEventListener("click", hanldeClickClose);
+
+
+    //Stop bubble event - Remember
+    modalBoxContainer.addEventListener("click", function (event) {
+      event.stopPropagation();
+    });
+  </script>
 </html>
