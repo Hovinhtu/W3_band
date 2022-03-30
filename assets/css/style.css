@@ -7,13 +7,84 @@
   --fontSize: 16px;
 }
 html {
+  scroll-behavior: smooth;
   font-family: "Montserrat", sans-serif;
   font-size: var(--fontSize);
 }
 
+/* Common code */
 .text-white {
   color: #fff !important;
 }
+
+.pull-right{
+  float: right !important;
+}
+.about-section,
+.tour-section,
+.contact-section {
+  max-width: 800px;
+  margin: auto;
+  padding: 64px 16px;
+}
+
+.row {
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+.row::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.col {
+  float: left;
+  padding: 0 8px;
+}
+
+.col-1 {
+  width: 100%;
+}
+.col-2 {
+  width: calc(100% / 2);
+}
+
+.col-3 {
+  width: calc(100% / 3);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mt-8{
+  margin-bottom: 8px !important;
+}
+
+.padding-32{
+  padding: 32px 0px;
+}
+
+.btn {
+  margin: 0px 0px 16px;
+  background-color: #000;
+  width: fit-content;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+  border: none;
+}
+
+.btn:hover {
+  background-color: #ccc;
+  color: #000;
+  cursor: pointer;
+}
+
+
+/* Common code */
 #main {
   font-family: "Lato", sans-serif;
 }
@@ -30,11 +101,10 @@ html {
   z-index: 1;
 }
 
-#logo {
-}
 .clear {
   clear: both;
 }
+
 #nav,
 .subnav {
   list-style: none;
@@ -149,20 +219,13 @@ html {
   font-size: 14px;
 }
 
-#content {
-}
-
+/* Content section */
 .content-section {
   width: 100%;
   line-height: 1.5;
   text-align: center;
 }
-.about-section,
-.tour-section {
-  max-width: 800px;
-  margin: auto;
-  padding: 64px 16px;
-}
+
 .content-section .section-heading {
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -177,6 +240,7 @@ html {
   opacity: 0.6;
   margin: 15px 0;
 }
+/* About section */
 
 .about-section .about-text {
   text-align: justify;
@@ -185,19 +249,15 @@ html {
   line-height: 1.5;
 }
 
-.about-section .member-list {
+.member-list {
   padding: 32px 0;
 }
-.about-section .member-list .member-item {
-  float: left;
-  width: calc(100% / 3);
-  text-align: center;
-}
-.about-section .member-list .member-name {
+
+.member-name {
   margin: 15px 0;
   font-size: 14px;
 }
-.about-section .member-list .member-img {
+.member-img {
   width: 60%;
   margin-bottom: 16px;
   vertical-align: middle;
@@ -242,18 +302,9 @@ html {
 }
 
 .tour-place {
-  width: calc(100% / 3);
-  display: inline-block;
-  float: left;
   padding: 0px 8px;
 }
 
-.tour-place:first-child {
-  padding-left: 0px;
-}
-.tour-place:last-child {
-  padding-right: 0px;
-}
 .tour-place-img {
   width: 100%;
   height: 180px;
@@ -285,23 +336,9 @@ html {
   margin: 15px 0px;
 }
 
-.button {
-  margin: 0px 0px 16px;
-  background-color: #000;
-  width: fit-content;
-  padding: 8px 16px;
-  text-decoration: none;
-  color: #fff;
-  display: inline-block;
-  border: none;
-}
 
-.button:hover {
-  background-color: #ccc;
-  color: #000;
-  cursor: pointer;
-}
 
+/* Modal box */
 .modal-box {
   position: fixed;
   top: 0;
@@ -314,9 +351,10 @@ html {
   justify-content: center;
 }
 
-.modal-box-open{
+.modal-box-open {
   display: flex;
 }
+
 .modal-box-container {
   background-color: #fff;
   width: 900px;
@@ -325,6 +363,7 @@ html {
   position: relative;
   animation: modalBoxDown ease-in-out 0.4s;
 }
+
 .btn-close:hover {
   opacity: 0.8;
   cursor: pointer;
@@ -347,7 +386,6 @@ html {
   color: #fff;
   letter-spacing: 5px;
 }
-
 
 .modal-box-header-title {
   margin: 10px 0;
@@ -376,6 +414,7 @@ html {
   opacity: 0.8;
   cursor: pointer;
 }
+
 .input-ticket-button {
   background-color: #009688;
   border: none;
@@ -387,26 +426,86 @@ html {
   margin: 15px 0px;
 }
 
-
 .modal-box-footer-text {
   float: right;
   margin: 15px 0 20px;
   font-size: 15px;
 }
 
-.modal-box-footer-text a{
-  color: #2196F3;
+.modal-box-footer-text a {
+  color: #2196f3;
   cursor: pointer;
 }
 
 @keyframes modalBoxDown {
-  from{
+  from {
     opacity: 0;
     transform: translateY(-150px);
-  } to {
+  }
+  to {
     opacity: 1;
     transform: translateY(0px);
   }
 }
+
+/* Contact section */
+.contact-list {
+  font-size: 18px;
+  margin-bottom: 18px;
+}
+.contact-list li {
+  list-style: none;
+  line-height: 1.5;
+}
+
+.contact-list li i {
+  margin-right: 10px;
+}
+
+.form-control {
+  font-size: 15px;
+  padding: 8px;
+  width: 100%;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+/* map section */
+.map-img{
+  width: 100%;
+}
+
+/* footer section */
 #footer {
+  font-size: 24px;
+  padding: 64px 16px;
+  text-align: center;
+ 
+}
+
+.social-list li{
+  list-style: none;
+  display: inline-block;
+}
+
+.social-list li a{
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.6);
+  
+}
+
+.footer-text{
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.6);
+  margin: 15px 0;
+}
+
+.footer-text a{
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.6);
+}
+.social-list li a:hover,
+.footer-text a:hover{
+  color: rgba(0, 0, 0, 0.4);
+  cursor: pointer;
 }
