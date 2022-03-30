@@ -5,9 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>W3_band</title>
-    <link rel="icon" href="./assets/icon/favicon-16x16.png"  type="image/x-icon" />
+    <link
+      rel="icon"
+      href="./assets/icon/favicon-16x16.png"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="./assets/css/themify-icons.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/reponsive.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,7 +31,7 @@
           <li><a href="#tour">Tour</a></li>
           <li><a href="#contact">Contact</a></li>
           <li>
-            <a href="\">More </a>
+            <a href="#">More </a>
             <span class="dropdown"></span>
             <ul class="subnav">
               <li><a href="#">Merchandise</a></li>
@@ -35,7 +40,8 @@
             </ul>
           </li>
         </ul>
-        <span class="ti-search"></span>
+        <span class="ti-search header-search"></span>
+        <span class="ti-menu header-menu menu-js"></span>
       </div>
 
       <!-- Slider -->
@@ -69,7 +75,7 @@
             ea commodo consequat.
           </p>
           <div class="member-list">
-            <div class="col col-3 text-center">
+            <div class="col col-3 s-col-ful text-center">
               <div class="member-name">Name</div>
               <img
                 src="/assets/img/bandmember.jpg"
@@ -77,7 +83,7 @@
                 class="member-img"
               />
             </div>
-            <div class="col col-3 text-center">
+            <div class="col col-3 s-col-ful text-center">
               <div class="member-name">Name</div>
               <img
                 src="/assets/img/bandmember.jpg"
@@ -85,7 +91,7 @@
                 class="member-img"
               />
             </div>
-            <div class="col col-3 text-center">
+            <div class="col col-3 s-col-ful text-center">
               <div class="member-name">Name</div>
               <img
                 src="/assets/img/bandmember.jpg"
@@ -93,8 +99,9 @@
                 class="member-img"
               />
             </div>
+            <div class="clear"></div>
           </div>
-          <div class="clear"></div>
+        
         </div>
 
         <!-- Tour section -->
@@ -113,7 +120,7 @@
               <li>November<span class="quantity">3</span></li>
             </ul>
             <div class="row tour-places">
-              <div class="col col-3 tour-place">
+              <div class="col col-3 s-col-ful tour-place">
                 <img
                   src="./assets/places/newyork.jpg"
                   alt="no-picture"
@@ -125,10 +132,10 @@
                   <p class="desc">
                     Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                   </p>
-                  <button class="btn js-open-modal-box">Buy Tickets</button>
+                  <button class="btn js-open-modal-box s-full-width">Buy Tickets</button>
                 </div>
               </div>
-              <div class="col col-3 tour-place">
+              <div class="col col-3 s-col-ful tour-place">
                 <img
                   src="./assets/places/paris.jpg"
                   alt="no-picture"
@@ -140,10 +147,10 @@
                   <p class="desc">
                     Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                   </p>
-                  <button class="btn js-open-modal-box">Buy Tickets</button>
+                  <button class="btn js-open-modal-box s-full-width">Buy Tickets</button>
                 </div>
               </div>
-              <div class="col col-3 tour-place">
+              <div class="col col-3 s-col-ful tour-place">
                 <img
                   src="./assets/places/sanfran.jpg"
                   alt="no-picture"
@@ -155,7 +162,7 @@
                   <p class="desc">
                     Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                   </p>
-                  <button class="btn js-open-modal-box">Buy Tickets</button>
+                  <button class="btn js-open-modal-box s-full-width">Buy Tickets</button>
                 </div>
               </div>
             </div>
@@ -216,17 +223,17 @@
           </div>
 
           <div class="row padding-32">
-            <div class="col col-2">
+            <div class="col col-2 s-col-ful">
               <ul class="contact-list">
                 <li><i class="ti-location-pin"></i>Chicago, US</li>
                 <li><i class="ti-mobile"></i>Phone: +00 151515</li>
                 <li><i class="ti-email"></i>Email: mail@mail.com</li>
               </ul>
             </div>
-            <div class="col col-2">
+            <div class="col col-2 s-col-ful">
               <form action="">
                 <div class="row mt-8">
-                  <div class="col col-2">
+                  <div class="col col-2 s-col-ful s-mt-8">
                     <input
                       type="text"
                       name=""
@@ -236,7 +243,7 @@
                       class="form-control"
                     />
                   </div>
-                  <div class="col col-2">
+                  <div class="col col-2 s-col-ful">
                     <input
                       type="email"
                       name=""
@@ -259,30 +266,43 @@
                     />
                   </div>
                 </div>
-                <input type="submit" value="SEND" class="btn pull-right" />
+                <input type="submit" value="SEND" class="btn pull-right s-full-width" />
               </form>
-             
             </div>
           </div>
         </div>
 
         <!-- Map section -->
         <div class="map-section">
-          <img src="./assets/places/map.jpg" alt="no-picture" class="map-img">
+          <img src="./assets/places/map.jpg" alt="no-picture" class="map-img" />
         </div>
       </div>
 
       <!-- Footer -->
       <div id="footer">
         <div class="social-list">
-          <li><a href=""><i class="ti-facebook"></i></a></li>
-          <li><a href=""><i class="ti-instagram"></i></a></li>
-          <li><a href=""><i class="ti-github"></i></a></li>
-          <li><a href=""><i class="ti-pinterest"></i></a></li>
-          <li><a href=""><i class="ti-twitter"></i></a></li>
-          <li><a href=""><i class="ti-linkedin"></i></a></li>
+          <li>
+            <a href=""><i class="ti-facebook"></i></a>
+          </li>
+          <li>
+            <a href=""><i class="ti-instagram"></i></a>
+          </li>
+          <li>
+            <a href=""><i class="ti-github"></i></a>
+          </li>
+          <li>
+            <a href=""><i class="ti-pinterest"></i></a>
+          </li>
+          <li>
+            <a href=""><i class="ti-twitter"></i></a>
+          </li>
+          <li>
+            <a href=""><i class="ti-linkedin"></i></a>
+          </li>
         </div>
-        <p class="footer-text">Powered by <a href="" class="author">HoVinhTu</a></p>
+        <p class="footer-text">
+          Powered by <a href="" class="author">HoVinhTu</a>
+        </p>
       </div>
     </div>
   </body>
@@ -314,5 +334,35 @@
     modalBoxContainer.addEventListener("click", function (event) {
       event.stopPropagation();
     });
+  </script>
+  <!-- Menu drop js -->
+  <script>
+    const menuBtn = document.querySelector(".menu-js");
+    const header = document.getElementById("header");
+    const direcBtns = document.querySelectorAll("#nav li a");
+    
+    
+    const heightOfHeader = header.clientHeight;
+    var flag = true;
+
+    function handleClickOn() {
+      header.style.height = "auto";
+      header.style.overflow = "visible";
+      flag = !flag;
+    }
+    function handleClickOff() {
+      header.style.height = `${heightOfHeader}px`;
+      header.style.overflow = "hidden";
+      flag = !flag;
+    }
+
+    function handleClickToggle(){
+      flag ? handleClickOn() : handleClickOff();
+     
+    }
+    menuBtn.addEventListener("click", handleClickToggle);
+    for(var direcBtn of direcBtns){
+      direcBtn.addEventListener("click", handleClickOff);
+    }
   </script>
 </html>
