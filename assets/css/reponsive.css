@@ -1,11 +1,11 @@
 /* PC >= 1024px */
-@media only screen and (min-width: 1024px){
+@media only screen and (min-width: 64em){
     #header{
         overflow: visible !important;
     }
 }
 /* Tablet < 1023px and >= 740px */
-@media only screen and (max-width: 1023px) and (min-width: 740px) {
+@media only screen and (max-width: 63.9375em) and (min-width: 46.25em) {
     #header{
         overflow: visible !important;
     }
@@ -48,4 +48,7 @@
     .header-menu{
         display:block;
       }
+    .btn{
+        padding: 16px 32px;
+    }
 }
