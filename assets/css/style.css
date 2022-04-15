@@ -202,15 +202,38 @@ html {
   color: #000;
 }
 
-
-#slider {
-  position: relative;
-  margin-top: 50px;
-  padding-top: 50%;
-  background: url("../img/chicago.jpg") top center / cover no-repeat;
+.slider{
+  animation: fadeInSlider linear 0.3s;
 }
 
-#slider .text {
+@keyframes fadeInSlider {
+  from{
+    opacity: 0.4;
+  } to {
+    opacity: 1;
+  }
+}
+.slider__container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-top: 50px;
+}
+
+
+.slider--show{
+  display: block;
+}
+
+.slider--hide{
+  display: none;
+}
+
+.slider__img{
+  width: 100%;
+}
+
+.slider__text {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -223,14 +246,14 @@ html {
  
 }
 
-#slider .text .title {
+.slider__title {
   margin: 10px 0;
   line-height: 30px;
   font-size: 24px;
   font-weight: 400;
   
 }
-#slider .text .paragraph {
+.slider__paragraph {
   margin: 15px 0;
   line-height: 22.5px;
   font-family: "Lato", sans-serif;

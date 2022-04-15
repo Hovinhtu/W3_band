@@ -44,17 +44,42 @@
         <span class="ti-menu header-menu menu-js"></span>
       </div>
 
-      <!-- Slider -->
-      <div id="slider">
-        <div class="text">
-          <h3 class="title">Chicago</h3>
-          <p class="paragraph">
-            <b> Thank you, Chicago - A night we won't forget. </b>
-          </p>
-        </div>
-      </div>
-
       <div id="content">
+        <!-- Slider -->
+        <div class="slider__container">
+          <div class="slider slider--show">
+            <img
+              src="./assets/img/chicago.jpg"
+              alt="img__1"
+              class="slider__img"
+            />
+            <div class="slider__text">
+              <h3 class="slider__text__title">Chicago</h3>
+              <p class="slider__text__paragraph">
+                <b> Thank you, Chicago - A night we won't forget. </b>
+              </p>
+            </div>
+          </div>
+          <div class="slider slider--hide">
+            <img src="./assets/img/la.jpg" alt="img__2" class="slider__img" />
+            <div class="slider__text">
+              <h3 class="slider__text__title">Los Angeles</h3>
+              <p class="slider__text__paragraph">
+                <b> We had the best time playing at Venice Beach! </b>
+              </p>
+            </div>
+          </div>
+          <div class="slider slider--hide">
+            <img src="./assets/img/ny.jpg" alt="img__3" class="slider__img" />
+            <div class="slider__text">
+              <h3 class="slider__text__title">New York</h3>
+              <p class="slider__text__paragraph">
+                <b> The atmosphere in New York is lorem ipsum. </b>
+              </p>
+            </div>
+          </div>
+        </div>
+
         <!-- About section -->
         <div id="band" class="about-section">
           <div class="content-section">
@@ -101,7 +126,6 @@
             </div>
             <div class="clear"></div>
           </div>
-        
         </div>
 
         <!-- Tour section -->
@@ -132,7 +156,9 @@
                   <p class="desc">
                     Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                   </p>
-                  <button class="btn js-open-modal-box s-full-width">Buy Tickets</button>
+                  <button class="btn js-open-modal-box s-full-width">
+                    Buy Tickets
+                  </button>
                 </div>
               </div>
               <div class="col col-3 s-col-ful tour-place">
@@ -147,7 +173,9 @@
                   <p class="desc">
                     Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                   </p>
-                  <button class="btn js-open-modal-box s-full-width">Buy Tickets</button>
+                  <button class="btn js-open-modal-box s-full-width">
+                    Buy Tickets
+                  </button>
                 </div>
               </div>
               <div class="col col-3 s-col-ful tour-place">
@@ -162,7 +190,9 @@
                   <p class="desc">
                     Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                   </p>
-                  <button class="btn js-open-modal-box s-full-width">Buy Tickets</button>
+                  <button class="btn js-open-modal-box s-full-width">
+                    Buy Tickets
+                  </button>
                 </div>
               </div>
             </div>
@@ -226,8 +256,14 @@
             <div class="col col-2 s-col-ful">
               <ul class="contact-list">
                 <li><i class="ti-location-pin"></i>Chicago, US</li>
-                <li><i class="ti-mobile"></i>Phone: <a href="tel:+00 151515">+00 151515</a></li>
-                <li><i class="ti-email"></i>Email: <a href="mailto:mail@mail.com">mail@mail.com</a></li>
+                <li>
+                  <i class="ti-mobile"></i>Phone:
+                  <a href="tel:+00 151515">+00 151515</a>
+                </li>
+                <li>
+                  <i class="ti-email"></i>Email:
+                  <a href="mailto:mail@mail.com">mail@mail.com</a>
+                </li>
               </ul>
             </div>
             <div class="col col-2 s-col-ful">
@@ -266,7 +302,11 @@
                     />
                   </div>
                 </div>
-                <input type="submit" value="SEND" class="btn pull-right s-full-width" />
+                <input
+                  type="submit"
+                  value="SEND"
+                  class="btn pull-right s-full-width"
+                />
               </form>
             </div>
           </div>
@@ -340,8 +380,7 @@
     const menuBtn = document.querySelector(".menu-js");
     const header = document.getElementById("header");
     const direcBtns = document.querySelectorAll("#nav li a");
-    
-    
+
     const heightOfHeader = header.clientHeight;
     var flag = true;
 
@@ -356,13 +395,30 @@
       flag = !flag;
     }
 
-    function handleClickToggle(){
+    function handleClickToggle() {
       flag ? handleClickOn() : handleClickOff();
-     
     }
     menuBtn.addEventListener("click", handleClickToggle);
-    for(var direcBtn of direcBtns){
+    for (var direcBtn of direcBtns) {
       direcBtn.addEventListener("click", handleClickOff);
+    }
+  </script>
+  <script>
+    const sliders = document.querySelectorAll(".slider");
+    const NUM_SLIDER = sliders.length - 1;
+    var index = 0;
+
+    const timerId = setInterval(sliderAnimation, 3000);
+
+    function sliderAnimation() {
+      sliders[index].classList.remove("slider--show");
+      sliders[index].classList.add("slider--hide");
+      index++;
+      if (index > NUM_SLIDER) {
+        index = 0;
+      }
+      sliders[index].classList.remove("slider--hide");
+      sliders[index].classList.add("slider--show");
     }
   </script>
 </html>
